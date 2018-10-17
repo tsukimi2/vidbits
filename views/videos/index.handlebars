@@ -1,0 +1,16 @@
+<header>Video List</header>
+<div>
+  <button><a id="link_create" href="/videos/create">Create</a></button>
+</div>
+<div id="videos-container" class="contents-container">
+  {{#each videos}}
+    <div class="video-card">
+      <div class="video-player">
+          <iframe class="video-player" src="{{this.videoUrl}}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-title">
+        <a href="/videos/{{this._id}}">{{this.title}}</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

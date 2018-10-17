@@ -1,0 +1,28 @@
+  <h2 class="title-container">Save a video</h2>
+  <div>
+    <form method="post" action="/videos">
+      <div>
+        <label>Title: </label>
+        <input type="text" id="txtTitle" name="title" value="{{video.title}}"">
+        {{#if errobj.title}}
+          <span id="errmsg-title" style="color: red; font-size: 0.6em">{{errobj.title.message}}</span>
+        {{/if}}
+      </div>
+      <div>
+        <label>Video URL: </label>
+        <input type="text" id="txtVideoUrl" name="videoUrl" value="{{video.videoUrl}}"">
+        {{#if errobj.videoUrl}}
+          <span id="errmsg-videoUrl" style="color: red; font-size: 0.6em">{{errobj.videoUrl.message}}</span>
+        {{/if}}        
+      </div>
+      <div>
+        <label>Description: </label>
+        <input type="text" id="txtDescription" name="description" value="{{video.description}}"">
+        {{#if errobj.description}}
+          <span id="errmsg-description" style="color: red; font-size: 0.6em">{{errobj.description.message}}</span>
+        {{/if}}         
+      </div>
+
+      <input type="submit" id="btnSubmit" value="Create Video">
+    </form>
+  </div>

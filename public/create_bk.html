@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>VidBits - Create Video</title>
+<link rel="icon" type="image/ico" href="img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+<link rel='stylesheet' href='stylesheets/style.css'>
+</head>
+<body>
+  <div class="title-container">
+    <div class="title-logo">
+      <img src="img/logo.svg" alt="">
+    </div>
+  </div>
+  <h2 class="title-container">Save a video</h2>
+  <div>
+    <form method="post" action="/videos">
+      <div>
+        <label>Title: </label>
+        <input type="text" id="txtTitle" name="title">
+      </div>
+      <div>
+        <label>Video URL: </label>
+        <input type="text" id="txtVideoUrl" name="videoUrl">
+      </div>
+      <div>
+        <label>Description: </label>
+        <input type="text" id="txtDescription" name="description">
+      </div>
+
+      <input type="submit" id="btnSubmit" value="Create Video">
+    </form>
+  </div>
+</body>
+</html>
+
